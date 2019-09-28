@@ -3,32 +3,27 @@
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
 
+<body>
   <div class="container">
     <h1>Burgers! NOM NOM NOM</h1>
     <hr>
 
     <h2>Burgers to try</h2>
-
-    <ul>
-      {{#each burgers}}
-      {{#unless devoured}}
-      {{> burgers/burgers-block devoured=true}}
-      {{/unless}}
-      {{/each}}
-    </ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burgers-block devoured=true}}
+    {{/unless}}
+    {{/each}}
 
     <h2>Burgers that I've devoured!</h2>
-
-    <ul>
-      {{#each burgers}}
-      {{#if devoured}}
-      {{> burgers/burgers-block devoured=false}}
-      {{/if}}
-      {{/each}}
-    </ul>
-
+    {{!-- <div class="row"> --}}
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burgers-block devoured=false}}
+    {{/if}}
+    {{/each}}
+    {{!-- </div> --}}
     <h2>Add a new burger</h2>
     <form class="create-form">
 
@@ -47,3 +42,4 @@
     </form>
 
   </div>
+</body>

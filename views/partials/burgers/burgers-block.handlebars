@@ -1,9 +1,21 @@
-<li>
-	{{name}}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}Devoured this one!{{else}}Back on the list{{/if}}
-	</button>
+<div class="container">
+	<ul>
+		<div class="row">
+			<div class="col-2">{{name}}</div>
 
-	<button class="delete-burgers" data-id="{{this.id}}">Delete</button>
-</li>
+			<div class="col-2">
+				<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+					{{#if devoured}}Devoured this one!{{else}}Back on the list{{/if}}
+				</button>
+			</div>
+			<div class="col-2">
+				<button class="delete-burgers" data-id="{{this.id}}">Delete</button>
+			</div>
+		</div>
+	</ul>
+</div>

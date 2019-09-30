@@ -11,3 +11,7 @@ ul {
   padding: 5px;
   border-bottom: solid 1px;
 }
+
+.col-3 {
+  text-align: right;
+}
